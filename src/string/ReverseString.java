@@ -2,7 +2,7 @@ package string;
 
 public class ReverseString {
 
-    public String reverseString(String str){
+    public String reverseString(String str) {
         String reversedString = "";
         StringBuilder sb = new StringBuilder(str);
         sb.reverse();
