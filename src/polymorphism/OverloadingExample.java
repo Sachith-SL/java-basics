@@ -9,4 +9,9 @@ public class OverloadingExample {
     public double add(double a, int b) {
         return 1.0;
     }
+
+    //cannot achieve polymorphism by change return type only
+//    public int add(double a, int b) {
+//        return 1;
+//    }
 }
