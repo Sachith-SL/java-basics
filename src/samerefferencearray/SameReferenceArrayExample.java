@@ -1,3 +1,5 @@
+package samerefferencearray;
+
 import java.util.Arrays;
 
 public class SameReferenceArrayExample {
