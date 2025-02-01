@@ -1,5 +1,7 @@
 package number;
 
+/* 1,2,3,5,7,11,13,17, ... */
+
 public class PrimeNumberCheck {
     public static boolean isPrimeNumber(int num) {
         if (num < 2) {
