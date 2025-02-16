@@ -5,7 +5,6 @@ import java.util.Set;
 
 public class FibonacciSequencePrint {
     public static int getFibonacciNumber(int n) {
-        int[] fibonacciArr = new int[n];
         if (n == 1)
             return 0;
         if (n == 2) {
@@ -13,7 +12,9 @@ public class FibonacciSequencePrint {
         }
         if (n >= 3) {
             return getFibonacciNumber(n - 1) + getFibonacciNumber(n - 2);
-        } else return 0;
+        }
+        else
+            return 0;
 
     }
 

@@ -4,7 +4,7 @@ import java.util.Map;
 import java.util.TreeMap;
 
 public class MapExamples {
-    public void example(){
+    public static void example(){
         Map<String, Integer> map = new TreeMap<>();
         map.put("Sachith", 32);
         map.put("Chathurika", 31);
@@ -16,9 +16,11 @@ public class MapExamples {
 //            System.out.println(key);
 //        }
 
-        for (Map.Entry m : map.entrySet()){
-            System.out.println(m.getKey()+" "+m.getValue());
-        }
+//        for (Map.Entry m : map.entrySet()){
+//            System.out.println(m.getKey()+" "+m.getValue());
+//        }
+
+        map.forEach((k,v)->System.out.println(k+" - "+v));
 
 
 //        System.out.println(map);
