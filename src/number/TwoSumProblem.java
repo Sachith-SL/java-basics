@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class TwoSumProblem {
 
-    //1. brute-force solution
+    //1. brute-force solution - Time Complexity: O(n^2), Space Complexity O(1)
     public static int[] example1(int[] nums, int target) {
         int n = nums.length;
         for (int i = 0; i < n; i++) {
@@ -18,11 +18,12 @@ public class TwoSumProblem {
         return new int[]{};
     }
 
-    // 2. hash map solution
+    // 2. hash map solution //    Time Complexity: O(n), Space Complexity O(n)
     public static int[] example2(int[] nums, int target) {
 
         Map<Integer, Integer> numMap = new HashMap<>();
         int n = nums.length;
+
         for (int i = 0; i < n; i++) {
             int complement = target - nums[i];
             if (numMap.containsKey(complement)) {
@@ -30,6 +31,6 @@ public class TwoSumProblem {
             }
             numMap.put(nums[i], i);
         }
-        return new int[]{};
+        return null;
     }
 }

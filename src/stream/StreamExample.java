@@ -1,9 +1,6 @@
 package stream;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.NoSuchElementException;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class StreamExample {
@@ -44,7 +41,7 @@ public class StreamExample {
         System.out.println("------------------");
         List<String> fruits = new ArrayList<>();
         Collections.addAll(fruits,"apple", "banana", "cherry");
-        fruits.stream().map(x ->x.toUpperCase()).forEach(System.out::println);
+        fruits.stream().map(String::toUpperCase).forEach(System.out::println);
 
         System.out.println("------------------");
         List<Integer> integerList2 = new ArrayList<>();
@@ -52,5 +49,12 @@ public class StreamExample {
 
         List<Integer> emptyList = new ArrayList<>();
         System.out.println(emptyList.stream().min(Integer::compareTo).orElseThrow(()-> new NoSuchElementException()));
+    }
+
+    public static void example(){
+        List<String> nameList = Arrays.asList("Sachith","Malith","Dinesh","Malith");
+        nameList.stream().distinct().filter(m-> m.startsWith("S")).map(m-> "Mr : "+m).forEach(System.out::println);
+        nameList.stream().distinct().forEach(System.out::println);
+
     }
 }

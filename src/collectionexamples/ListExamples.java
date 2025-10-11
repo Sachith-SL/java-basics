@@ -13,7 +13,7 @@ public class ListExamples {
         list.add(2);
         list.add(5);
         list.add(3);
-        list.forEach((num)-> System.out.print(num+", "));
+        list.forEach(System.out::print);
         list.remove(Integer.valueOf(5));
 
 //        Iterator itr = list.iterator();
